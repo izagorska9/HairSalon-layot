@@ -1,0 +1,884 @@
+:root {
+  --white: #EDEEF1;
+  --brown: #B3A082
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  background-color: var(--white);
+  font-family: arial;
+  width: 85vw;
+  margin: 0 auto;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section.background {
+  height: 300px;
+  background-image: url('img/bgc.jpg');
+  background-position: 90% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  animation: slide 8s linear 1 forwards;
+
+}
+
+@keyframes slide {
+  0% {
+    background-position: 90% 50%;
+    ;
+  }
+
+  100% {
+    background-position: 90% 30%;
+
+  }
+}
+
+section.background div {
+  background-color: white;
+  position: absolute;
+  top: 30%;
+  height: 100px;
+  width: 100%;
+  opacity: 50%;
+}
+
+section.background div h1 {
+  position: absolute;
+  left: 65%;
+  font-size: 50px;
+  line-height: 100px;
+  font-family: 'Courgette', cursive;
+  animation: slideText 8s normal 1 forwards;
+}
+
+@keyframes slideText {
+  0% {
+    left: 60%;
+    ;
+  }
+
+  100% {
+    left: 50%;
+
+  }
+}
+
+nav {
+  height: 10vh;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+
+nav li {
+  flex-basis: 100%;
+}
+
+nav a {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  line-height: 10vh;
+}
+
+nav a:hover {
+  color: var(--brown);
+
+
+}
+
+
+
+.history img {
+  float: left;
+  width: 50%;
+  height: auto;
+  padding: 20px 50px;
+  filter: grayscale(50%);
+}
+
+.history h1 {
+  text-align: center;
+  font-size: 30px;
+  padding: 20px;
+}
+
+.history p {
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+
+
+.services {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  clear: both;
+
+}
+
+.services h1 {
+  margin-top: 50px;
+  flex-grow: 1;
+  font-size: 30px;
+  text-align: center;
+
+}
+
+.services ul {
+  list-style: none;
+
+}
+
+.services ul h2 {
+  margin: 30px;
+  font-size: 24px;
+}
+
+.services ul li {
+  position: relative;
+  font-size: 18px;
+  border-bottom: 1px solid var(--brown);
+  padding: 20px;
+}
+
+.price {
+  position: absolute;
+  right: 200px;
+}
+
+
+
+.reservation {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 10%;
+  background-color: var(--brown);
+
+
+}
+
+.reservation:hover {
+  cursor: pointer;
+  filter: opacity(80%);
+  border: 1px solid black
+}
+
+.stylists {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+
+}
+
+.stylists h1 {
+  margin: 100px 0 50px 0;
+  font-size: 30px;
+  flex-shrink: 0;
+  flex-basis: 100%;
+  text-align: center;
+
+}
+
+.stylists div {
+
+  width: 20%;
+  height: 550x;
+  border: 3px solid var(--brown);
+  background: #eee;
+  margin: auto;
+  padding: 15px 10px;
+}
+
+.stylist img {
+  width: 100%;
+  filter: grayscale(70%);
+}
+
+.stylist img:hover {
+  filter: grayscale(20%);
+}
+
+.stylist h2 {
+  text-align: center;
+  margin: 30px;
+}
+
+.stylists div:hover {
+
+  filter: drop-shadow(4px 4px 5px gray)
+}
+
+
+
+.gallery h1 {
+  margin: 100px 0 50px 0;
+  font-size: 30px;
+  flex-shrink: 0;
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.gallery .images {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+
+
+}
+
+.gallery a {
+  display: inline-block;
+  flex-basis: 20%;
+  margin: 20px;
+  box-shadow: 0 0 3px 3px gray;
+
+}
+
+.gallery a img {
+  width: 300px;
+  height: 200px;
+  float: right;
+}
+
+.contact {
+  margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.contact div {
+  flex-basis: calc(100%/3);
+}
+
+div.call {
+  margin-top: 50px;
+}
+
+.form-text {
+  padding: 10px;
+  margin: 10px;
+  width: 270px;
+}
+
+.form-btn {
+  padding: 5px 10px;
+  float: right;
+  margin-right: 60px;
+}
+
+.contact h1 {
+  flex-basis: 100%;
+  flex-shrink: 0;
+  height: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 30px;
+  text-align: center;
+}
+
+
+.contact h2 {
+  display: block;
+  font-size: 24px;
+  padding: 20px;
+}
+
+.contact li {
+  padding: 10px;
+  list-style: none;
+}
+
+.contact p {
+  padding: 10px;
+}
+
+
+.visible {
+  display: block;
+}
+
+@media only screen and (max-width:1200px) {
+
+
+  @keyframes slideText {
+    0% {
+      left: 60%;
+      ;
+    }
+
+    100% {
+      left: 45%;
+
+    }
+  }
+
+  .stylists div {
+
+    width: 25%;
+    /* height: 550x;
+    border: 3px solid var(--brown);
+    background: #eee;
+    margin: auto;
+    padding: 15px 10px; */
+  }
+
+  .form-text {
+    width: 240px;
+  }
+}
+
+@media only screen and (max-width:1024px) {
+
+  body {
+    width: 100vw;
+  }
+
+  section.background {
+    height: 35vh;
+  }
+
+  section.background div {
+    top: 50%;
+    height: 80px;
+  }
+
+  section.background div h1 {
+
+    font-size: 40px;
+    line-height: 80px;
+  }
+
+  nav {
+    height: 80px;
+
+  }
+
+  nav a {
+    line-height: 60px;
+    font-size: 22px;
+  }
+
+  .history img {
+    padding: 15px 30px;
+
+  }
+
+  .history h1 {
+    font-size: 24px;
+  }
+
+  .history p {
+    font-size: 15px;
+    margin-right: 15px;
+  }
+
+  .services h1 {
+    font-size: 24px;
+  }
+
+  .services ul h2 {
+    font-size: 20px;
+  }
+
+  .services ul li {
+    font-size: 15px;
+  }
+
+  .reservation {
+    padding: 10px 13px;
+    font-size: 0.8rem;
+  }
+
+  .stylists h1 {
+    font-size: 24px;
+  }
+
+  .stylist h2 {
+    font-size: 20px;
+    margin: 20px;
+  }
+
+  .stylist p {
+    font-size: 15px;
+  }
+
+
+  .contact h1 {
+    font-size: 24px;
+  }
+
+
+  .contact h2 {
+    font-size: 20px;
+  }
+
+  .contact {
+    flex-direction: column;
+  }
+
+
+  .form-text {
+    padding: 10px;
+    margin: 10px;
+    width: 270px;
+  }
+
+  .contact div.call {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+  }
+
+  .form-btn {
+    width: 70px;
+    padding: 5px;
+  }
+
+
+
+
+
+}
+
+@media only screen and (max-width:768px) {
+
+  body {
+
+    width: 100vw;
+
+  }
+
+  section.background div {
+    height: 10vh;
+  }
+
+  section.background div h1 {
+
+    font-size: 40px;
+    line-height: 10vh;
+  }
+
+  section.background {
+    height: 40vh;
+
+  }
+
+
+  @keyframes slideText {
+    0% {
+      left: 60%;
+      ;
+    }
+
+    100% {
+      left: 45%;
+
+    }
+  }
+
+  nav {
+    height: 60px;
+
+  }
+
+  nav a {
+    line-height: 60px;
+    font-size: 16px;
+  }
+
+  .history img {
+    padding: 20px;
+
+  }
+
+  .history h1 {
+    font-size: 24px;
+    padding: 10px
+  }
+
+  .history p {
+    margin-right: 10px;
+    font-size: 13px;
+  }
+
+  .services h1 {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+
+  .services ul h2 {
+    font-size: 18px;
+  }
+
+  .services ul li {
+    font-size: 13px;
+  }
+
+  .reservation {
+    padding: 8px 10px;
+    font-size: 0.6rem;
+  }
+
+  .stylists h1 {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+
+  .stylist h2 {
+    font-size: 18px;
+  }
+
+  .stylist p {
+    font-size: 13px;
+  }
+
+
+  .contact h1 {
+    font-size: 24px;
+  }
+
+
+  .contact h2 {
+    font-size: 18px;
+  }
+
+  .stylists {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stylists div {
+
+    margin: 50px;
+    width: 50%;
+    height: 550x;
+
+  }
+
+  .gallery .images {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+
+  .gallery a img {
+    width: 400px;
+    height: 300px;
+
+  }
+
+
+}
+
+@media only screen and (max-width:650px) {
+
+
+  section.background {
+    height: 90vh;
+    background-image: url('img/bgc2.jpg');
+    background-origin: inherit;
+    overflow-y: hidden;
+  }
+
+
+  section.background div {
+    top: 50%;
+    height: 15vh;
+  }
+
+  section.background div h1 {
+    font-size: 50px;
+    line-height: 15vh;
+    white-space: nowrap;
+  }
+
+  @keyframes slideText {
+    0% {
+      left: 45%;
+      ;
+    }
+
+    100% {
+      left: 10%;
+
+    }
+  }
+
+  nav li a {
+    font-size: 20px;
+  }
+
+  .history img {
+    float: none;
+    width: 90vw;
+    margin: 5px 5vw;
+
+  }
+
+  .history h1 {
+    text-align: center;
+    font-size: 30px;
+
+  }
+
+  .history p {
+    margin: 15px;
+    font-size: 18px;
+  }
+
+
+
+  .services {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    clear: both;
+
+  }
+
+
+  .stylists h1 {
+    margin: 30px 0;
+
+
+  }
+
+  .stylists div {
+    width: 50%;
+    margin-bottom: 20px;
+
+
+  }
+
+  .stylist h2 {
+    font-size: 24px;
+  }
+
+  .stylists p {
+    font-size: 16px;
+  }
+
+
+
+  .gallery h1 {
+    margin: 50px 0;
+
+  }
+
+  .gallery a img {
+    width: 400px;
+    height: 300px;
+  }
+
+
+}
+
+@media only screen and (max-width:530px) {
+
+
+  section.background {
+    height: 100vh;
+
+  }
+
+
+  section.background div {
+    top: 50%;
+    height: 30vh;
+    overflow: hidden;
+  }
+
+  section.background div h1 {
+    font-size: 60px;
+    line-height: 15vh;
+    white-space: normal;
+
+  }
+
+  @keyframes slideText {
+    0% {
+      left: 35%;
+      ;
+    }
+
+    100% {
+      left: 30%;
+
+    }
+  }
+
+  nav {
+    width: 50vw;
+    height: 50vh;
+    margin: 0 auto 10px auto;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav li a {
+
+    border-bottom: 1px solid black;
+  }
+
+  .history {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .history img {
+
+    width: 100%;
+    margin: 0;
+  }
+
+  .history p {
+    text-align: justify;
+    font-size: 15px;
+  }
+
+
+
+  .services {
+    width: 90vw;
+    margin: 0 auto;
+
+  }
+
+  .services ul li {
+    font-size: 16px;
+
+  }
+
+
+
+  .price {
+    right: 150px;
+  }
+
+  .reservation {
+    top: 10px;
+    right: 25px;
+    padding: 10px 13px;
+    font-size: 13px;
+
+  }
+
+
+  .stylists div {
+    width: 50%;
+    margin: 20px;
+
+
+  }
+
+
+  .gallery h1 {
+    margin: 50px 0;
+
+  }
+
+  .gallery a img {
+    width: 80vw;
+    height: auto;
+  }
+
+
+}
+
+@media only screen and (max-width:430px) {
+
+  section.background div {
+    height: 25vh;
+  }
+
+  section.background div h1 {
+    font-size: 45px;
+    line-height: 12.5vh;
+
+
+  }
+
+  @keyframes slideText {
+    0% {
+      left: 42%;
+      ;
+    }
+
+    100% {
+      left: 38%;
+
+    }
+  }
+
+  .history p {
+    font-size: 13px;
+  }
+
+  .services ul li {
+    font-size: 13px;
+
+  }
+
+
+
+
+  .price {
+    right: 130px;
+  }
+
+  .reservation {
+    padding: 8px 10px;
+    font-size: 10px;
+
+  }
+
+
+  .stylists p {
+    font-size: 13px;
+
+
+  }
+
+  .contact div ul {
+    font-size: 13px;
+  }
+
+  .contact div p {
+    font-size: 13px;
+  }
+
+
+}
